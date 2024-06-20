@@ -1,9 +1,16 @@
 import express from "express";
+import cors from "cors";
 import uploadRouter from "./routes/uploadRouter.js";
 const app = express();
 
 //Solicitudes HTTP en JSON
 app.use(express.json());
+
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 
 //ROUTING
 //Routing File
